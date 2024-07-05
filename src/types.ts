@@ -3,3 +3,7 @@ export interface Page {
   id: string;
 }
 
+export interface ApiPage {
+  title: string;
+  content: string;
+}
