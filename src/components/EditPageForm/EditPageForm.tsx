@@ -3,7 +3,7 @@ import {ApiPage} from '../../types';
 
 interface EditPageFormProps {
   page: ApiPage;
-  onFieldChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
+  onFieldChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   onFormSubmit: (event: FormEvent<HTMLFormElement>) => void;
 }
 
