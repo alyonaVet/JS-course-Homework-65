@@ -5,9 +5,10 @@ interface EditPageFormProps {
   page: ApiPage;
   onFieldChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   onFormSubmit: (event: FormEvent<HTMLFormElement>) => void;
+  disabled: boolean;
 }
 
-const EditPageForm: React.FC<EditPageFormProps> = ({page, onFormSubmit, onFieldChange}) => {
+const EditPageForm: React.FC<EditPageFormProps> = ({page, onFormSubmit, onFieldChange, disabled}) => {
   return (
     <form onSubmit={onFormSubmit}>
       <div className="form-group">
@@ -33,7 +34,7 @@ const EditPageForm: React.FC<EditPageFormProps> = ({page, onFormSubmit, onFieldC
           value={page.content}
         />
       </div>
-      <button type="submit" className="btn btn-primary mt-4">
+      <button type="submit" disabled={disabled} className="btn btn-primary mt-4">
         Save
       </button>
     </form>
